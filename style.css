@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* raleway-regular - latin */
+/* raleway-regular - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('raleway-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('raleway-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('raleway-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('raleway-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('raleway-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('raleway-v18-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+}
+
+/* raleway-800 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  src: url('raleway-v18-latin-800.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('raleway-v18-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('raleway-v18-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('raleway-v18-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('raleway-v18-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('raleway-v18-latin-800.svg#Raleway') format('svg'); /* Legacy iOS */
+}
+
+.container
+{
+	font-family: 'Raleway';
+	width:90%;
+	margin: auto;
+	color:black;
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+}
+
+h1, h2
+{
+	font-weight: 800;
+	font-size: large; 
+}
+
+h3
+{
+	font-weight: 800;
+	font-size: medium;
+}
+p
+{
+	font-size: small;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+
+header ul
+{
+	display:flex;
+	justify-content: space-around;
+
+}
+
+header nav
+{
+	width:40%;
+	height:auto;
+}
+
+.hebergement 
+{
+	color: #0065FC;
+}
+
+.inscription 
+{
+	color: #0065FC;
+	font-weight: bold;
+}
+
+header div
+{
+	display: flex;
+	justify-content: space-between;
+	
+}
+form div
+{
+	display: flex;
+	align-items: center;
+}
+form ul
+{
+	display: flex;
+	justify-content: space-between;
+	width: 75%;
+	height: auto;
+}
+
+form ul li
+{
+	border-right: 1px #F2F2F2 solid;
+	border-top: 1px #F2F2F2 solid;
+	border-bottom: 1px #F2F2F2 solid;
+	border-radius: 30px;
+	font-size: small;
+	display: flex;
+	align-items: center;
+	width:20%;
+	height: auto;
+
+
+}
+form ul i
+{
+	color:#0065FC;
+	background-color: #DEEBFF;
+	padding: 2.5%;
+	border-radius: 50%/50%;
+	margin-right: 2%;
+}
+
+form h2
+{
+	font-size: medium;
+}
+
+input
+{
+	margin: 0;
+	border: 1px #F2F2F2 solid;
+	padding: 0.2%;
+}
+
+button
+{
+	color: white;
+	background-color: #0065FC;
+	border: 1px #0065FC solid;
+	border-radius: 0 5px 5px 0;
+	padding: 0.2%
+
+}
+
+#map
+{
+	color: black;
+	background-color: #F2F2F2;
+	padding: 0.4%;
+	font-size: xx-small;
+	border: 1px #F2F2F2 solid;
+	margin: 0;
+}
+
+#info
+{
+	color: #0065FC;
+	border: 1px #F2F2F2 solid;
+	border-radius: 50%/50%;
+	padding: 0.5%;
+	font-size: xx-small;
+}
+
+section
+{
+	width:60%;
+	height: auto;
+	background-color: #F2F2F2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around; 
+}
+
+section article
+{
+	width: 30%;
+	height:auto;
+	padding:0.2%;
+	border-radius: 15px;
+	background-color: white;
+	overflow: hidden;
+
+}
+
+
