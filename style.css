@@ -7,13 +7,13 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
-  src: url('raleway-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url('font/raleway-v18-latin-regular.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('raleway-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('raleway-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('raleway-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('raleway-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('raleway-v18-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+       url('font/raleway-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/raleway-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font/raleway-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('font/raleway-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('font/raleway-v18-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
 }
 
 /* raleway-800 - latin */
@@ -23,16 +23,16 @@
   font-weight: 800;
   src: url('raleway-v18-latin-800.eot'); /* IE9 Compat Modes */
   src: local(''),
-       url('raleway-v18-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('raleway-v18-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
-       url('raleway-v18-latin-800.woff') format('woff'), /* Modern Browsers */
-       url('raleway-v18-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('raleway-v18-latin-800.svg#Raleway') format('svg'); /* Legacy iOS */
+       url('font/raleway-v18-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/raleway-v18-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font/raleway-v18-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('font/raleway-v18-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('font/raleway-v18-latin-800.svg#Raleway') format('svg'); /* Legacy iOS */
 }
 
 .container
 {
-	font-family: 'Raleway';
+	font-family: Raleway, sans-serif;
 	width:90%;
 	margin: auto;
 	color:black;
@@ -54,6 +54,7 @@ h3
 {
 	font-weight: 800;
 	font-size: medium;
+	margin:3px;
 }
 p
 {
@@ -65,12 +66,15 @@ ul
 	list-style-type: none;
 }
 
+em
+{
+	font-weight: bold;
+}
 
 header ul
 {
 	display:flex;
 	justify-content: space-around;
-
 }
 
 header nav
@@ -93,14 +97,14 @@ header nav
 header div
 {
 	display: flex;
-	justify-content: space-between;
-	
+	justify-content: space-between;	
 }
 form div
 {
 	display: flex;
 	align-items: center;
 }
+
 form ul
 {
 	display: flex;
@@ -120,7 +124,6 @@ form ul li
 	align-items: center;
 	width:20%;
 	height: auto;
-
 
 }
 form ul i
@@ -173,26 +176,243 @@ button
 	font-size: xx-small;
 }
 
-section
+#hebergement
 {
-	width:60%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 60px;
+}
+
+#hebergement h2
+{
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 8px;
+}
+
+#hebergement section
+{
+	width:66%;
 	height: auto;
 	background-color: #F2F2F2;
 	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;		
+}
+#hebergement section div
+{
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	align-content: space-around; 
+	align-content: space-around;
 }
 
-section article
+#hebergement section article
 {
-	width: 30%;
-	height:auto;
-	padding:0.2%;
+	width: 209px;
+	height:164px;
+	padding:1px;
 	border-radius: 15px;
 	background-color: white;
-	overflow: hidden;
-
+	box-sizing: border-box;
+	margin: 5px;
 }
+
+#hebergement section article h3, #hebergement section article p
+{
+	padding-left:5px;
+}
+
+#hebergement section article img
+{
+	width:200px;
+	height: 78px;
+	object-fit: cover;
+	border-radius: 15px 15px 0 0;
+	margin: 2px;
+	text-align: justify;
+}
+
+#hebergement article p
+{
+	margin: 2px;
+}
+#hebergement article i
+{
+	color:#0065FC;
+}
+
+.plus
+{
+	margin: 20px;
+}
+
+aside
+{
+	width:33%;
+	height: auto;
+	background-color: #F2F2F2;	
+}
+
+
+.populaires
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.populaires i
+{
+	margin-right: 20px;
+}
+aside article
+{
+	width: 317px;
+	height:117px;
+	padding:1px;
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 15px;
+	border-radius: 15px;
+	background-color: white;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+}
+aside article img
+
+{
+	width:100px;
+	height: 106px;
+	object-fit: cover;
+	border-radius: 15px 0 0 15px;
+	margin: 2px;
+	vertical-align: middle;
+}
+
+aside article p
+{
+	margin: 1%;
+}
+aside article i
+{
+	margin-top: 30px;
+	color:#0065FC;
+}
+aside article div
+{
+	margin: 12px;
+}
+aside article p
+{
+	margin-bottom: 20px;
+}
+
+#activites
+{
+	width:100%;
+	height: 30%;
+	display: flex;
+	justify-content: space-between;
+	padding: 2px;
+}
+
+#activites article
+{
+	width:260px;
+	height: auto;
+	border-radius: 15px;
+	box-shadow: 0 3px 2px #F2F2F2;
+}
+
+#activites div
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#activites h3
+{
+	padding:10px;
+	vertical-align: center;
+}
+
+#activites img
+{
+	border-radius: 15px 15px 0 0;
+}
+
+.port img
+{
+	width:260px;
+	height:370px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.fort img
+{
+	width:260px;
+	height:160px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.frioul img
+{
+	width:260px;
+	height:90px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.calanques img
+{
+	width:260px;
+	height:370px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.notre_dame img
+{
+	width:260px;
+	height:120px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.longchamp img
+{
+	width:260px;
+	height:135px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+footer
+{
+	font-family: Raleway, sans-serif;
+	color:black;
+	background-color: #F2F2F2;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+	padding-right: 300px;
+}
+
+footer h2
+{
+	margin-left: 60px;
+}
+
+footer ul
+{
+	padding: 0;
+	margin-left: 60px;
+}
+
 
 
