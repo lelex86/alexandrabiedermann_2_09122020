@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 
-/* raleway-regular - latin */
+/* Consignes générales */
 /* raleway-regular - latin */
 @font-face {
   font-family: 'Raleway';
@@ -15,7 +15,6 @@
        url('font/raleway-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('font/raleway-v18-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
 }
-
 /* raleway-800 - latin */
 @font-face {
   font-family: 'Raleway';
@@ -66,10 +65,12 @@ ul
 	list-style-type: none;
 }
 
-em
+strong
 {
 	font-weight: bold;
 }
+
+/* Consignes pour l'en-tête */
 
 header ul
 {
@@ -99,6 +100,9 @@ header div
 	display: flex;
 	justify-content: space-between;	
 }
+
+/* Consignes pour la partie formulaire de recherche */
+
 form div
 {
 	display: flex;
@@ -122,17 +126,26 @@ form ul li
 	font-size: small;
 	display: flex;
 	align-items: center;
+	text-align: center;
 	width:20%;
 	height: auto;
-
 }
+
+form ul li:hover
+{
+	
+	width:22%;
+	background-color: #DEEBFF;
+	height: auto;
+}
+
 form ul i
 {
 	color:#0065FC;
 	background-color: #DEEBFF;
 	padding: 2.5%;
 	border-radius: 50%/50%;
-	margin-right: 2%;
+	margin-right: 4%;
 }
 
 form h2
@@ -153,8 +166,13 @@ button
 	background-color: #0065FC;
 	border: 1px #0065FC solid;
 	border-radius: 0 5px 5px 0;
-	padding: 0.2%
+	padding: 0.2%;
+	cursor: pointer;
+}
 
+button:active
+{
+	box-shadow: 1px 1px 3px black inset;
 }
 
 #map
@@ -171,10 +189,12 @@ button
 {
 	color: #0065FC;
 	border: 1px #F2F2F2 solid;
-	border-radius: 50%/50%;
+	border-radius: 50%;
 	padding: 0.5%;
 	font-size: xx-small;
 }
+
+/* Consignes pour les résultats d'hébergements */
 
 #hebergement
 {
@@ -212,11 +232,19 @@ button
 {
 	width: 209px;
 	height:164px;
-	padding:1px;
+	padding:4px;
 	border-radius: 15px;
 	background-color: white;
 	box-sizing: border-box;
 	margin: 5px;
+	cursor: pointer;
+}
+
+#hebergement section article:hover
+{
+	width:215px;
+	height: 170px;
+	box-shadow: 2px 2px 2px black;
 }
 
 #hebergement section article h3, #hebergement section article p
@@ -226,12 +254,13 @@ button
 
 #hebergement section article img
 {
+	display: block;
 	width:200px;
 	height: 78px;
 	object-fit: cover;
 	border-radius: 15px 15px 0 0;
-	margin: 2px;
-	text-align: justify;
+	margin: auto;
+	text-align: center;
 }
 
 #hebergement article p
@@ -255,22 +284,23 @@ aside
 	background-color: #F2F2F2;	
 }
 
-
 .populaires
 {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
+
 .populaires i
 {
 	margin-right: 20px;
 }
+
 aside article
 {
 	width: 317px;
 	height:117px;
-	padding:1px;
+	padding:3px;
 	margin-left: 20px;
 	margin-top: 5px;
 	margin-bottom: 15px;
@@ -280,8 +310,15 @@ aside article
 	display: flex;
 	align-items: center;
 }
-aside article img
 
+aside article:hover
+{	
+	width:323px;
+	height: 123px;
+	box-shadow: 2px 2px 2px black;
+}
+
+aside article img
 {
 	width:100px;
 	height: 106px;
@@ -295,19 +332,24 @@ aside article p
 {
 	margin: 1%;
 }
+
 aside article i
 {
 	margin-top: 30px;
 	color:#0065FC;
 }
+
 aside article div
 {
 	margin: 12px;
 }
+
 aside article p
 {
 	margin-bottom: 20px;
 }
+
+/* Consignes pour la partie activités */
 
 #activites
 {
@@ -391,6 +433,8 @@ aside article p
 	object-fit: cover;
 	overflow: hidden;
 }
+
+/* Consignes pour le pieds de page */
 
 footer
 {
