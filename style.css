@@ -271,7 +271,6 @@ button:active
 	background-color: #F2F2F2;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
 	box-sizing: border-box;		
 }
 
@@ -280,7 +279,6 @@ button:active
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	align-content: space-around;
 }
 
 @media screen and (max-width:850px)
@@ -297,8 +295,8 @@ button:active
 
 	#hebergement section div
 	{
-		justify-content: flex-start;
-		align-content: flex-start;
+		justify-content: space-around;
+		align-content: center;
 	}
 }
 
@@ -345,10 +343,6 @@ button:active
 		width:317px;
 		height: 187px;
 		box-shadow: 3px 3px 15px #F2F2F2;
-	}
-	.plus
-	{
-		align-self: baseline;
 	}
 }
 
@@ -399,12 +393,6 @@ aside article
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
-}
-
-aside article:hover
-{	
-	scale: 1.2;
-	box-shadow: 2px 2px 2px black;
 }
 
 aside article a
@@ -540,18 +528,24 @@ aside article p
 
 @media screen and (max-width:850px)
 {
+	#activites
+	{
+		align-items: center;
+	}
+	
+	
+	#activites article
+	{
+		width: 317px;
+		height:187px;
+	}
+
 	.fort img, .frioul img, .longchamp img, .notre_dame img, .port img, .calanques img
 	{
 		width: 317px;
 		height:127px;
 	}
 
-	#activites article
-
-	{
-		width: 317px;
-		height:187px;
-	}
 }
 
 /* Consignes pour le pieds de page */
@@ -578,5 +572,12 @@ footer ul
 	margin-left: 60px;
 }
 
+@media screen and (max-width: 850px)
+{
+	footer
+	{
+		flex-direction: column;
+	}
+}
 
 
