@@ -38,6 +38,15 @@
 	color:black;
 }
 
+@media screen and (max-width:850px)
+{
+	.container
+	{
+		width: 100%;
+		margin: auto;
+	}
+}
+
 a
 {
 	text-decoration: none;
@@ -77,12 +86,12 @@ header ul
 {
 	display:flex;
 	justify-content: space-around;
+	flex-wrap: wrap-reverse;
 }
 
-header nav
+header li
 {
-	width:40%;
-	height:auto;
+	margin: 20px;
 }
 
 .hebergement 
@@ -100,6 +109,7 @@ header div
 {
 	display: flex;
 	justify-content: space-between;	
+	flex-wrap: wrap;
 }
 
 /* Consignes pour la partie formulaire de recherche */
@@ -113,6 +123,7 @@ form div
 form ul
 {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -231,7 +242,6 @@ button:active
 	background-position: center;
 	border-radius: 50% ;
 	margin-right: 10px;
-	
 }
 
   
@@ -256,19 +266,40 @@ button:active
 
 #hebergement section
 {
-	width:66%;
-	height: auto;
+	margin-right: 10px;
+	padding: 5px;
 	background-color: #F2F2F2;
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	box-sizing: border-box;		
 }
+
 #hebergement section div
 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-content: space-around;
+}
+
+@media screen and (max-width:850px)
+{
+	#hebergement
+	{
+		flex-direction: column-reverse;
+	}
+
+	#hebergement section
+	{
+		background-color: white;
+	}
+
+	#hebergement section div
+	{
+		justify-content: flex-start;
+		align-content: flex-start;
+	}
 }
 
 #hebergement section article
@@ -281,11 +312,14 @@ button:active
 	box-sizing: border-box;
 	margin: 5px;
 	cursor: pointer;
+	display: flex;
+	flex-direction: column;
 }
 
 #hebergement section article h3, #hebergement section article p
 {
 	padding-left:5px;
+	margin:2px;
 }
 
 #hebergement section article img
@@ -298,6 +332,26 @@ button:active
 	margin: auto;
 	text-align: center;
 }
+
+@media screen and (max-width:850px)
+{
+	#hebergement section article img
+	{
+		width:307px;
+		height: 117px;
+	}
+	#hebergement section article
+	{
+		width:317px;
+		height: 187px;
+		box-shadow: 3px 3px 15px #F2F2F2;
+	}
+	.plus
+	{
+		align-self: baseline;
+	}
+}
+
 
 #hebergement article p
 {
@@ -315,9 +369,11 @@ button:active
 
 aside
 {
-	width:33%;
-	height: auto;
+	margin-left: 10px;
+	padding: 5px;
 	background-color: #F2F2F2;	
+	display: flex;
+	flex-direction: column;
 }
 
 .populaires
@@ -337,9 +393,7 @@ aside article
 	width: 317px;
 	height:117px;
 	padding:3px;
-	margin-left: 20px;
-	margin-top: 5px;
-	margin-bottom: 15px;
+	margin:10px;
 	border-radius: 15px;
 	background-color: white;
 	box-sizing: border-box;
@@ -349,8 +403,7 @@ aside article
 
 aside article:hover
 {	
-	width:323px;
-	height: 123px;
+	scale: 1.2;
 	box-shadow: 2px 2px 2px black;
 }
 
@@ -392,14 +445,21 @@ aside article p
 	margin-bottom: 20px;
 }
 
+@media screen and (max-width:850px)
+{
+	aside
+	{
+		align-items: center;
+	}
+}
+
 /* Consignes pour la partie activités */
 
 #activites
 {
-	width:100%;
-	height: 30%;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 	padding: 2px;
 }
 
@@ -409,6 +469,7 @@ aside article p
 	height: auto;
 	border-radius: 15px;
 	box-shadow: 0 3px 2px #F2F2F2;
+	margin: 5px;
 }
 
 #activites div
@@ -475,6 +536,22 @@ aside article p
 	height:135px;
 	object-fit: cover;
 	overflow: hidden;
+}
+
+@media screen and (max-width:850px)
+{
+	.fort img, .frioul img, .longchamp img, .notre_dame img, .port img, .calanques img
+	{
+		width: 317px;
+		height:127px;
+	}
+
+	#activites article
+
+	{
+		width: 317px;
+		height:187px;
+	}
 }
 
 /* Consignes pour le pieds de page */
