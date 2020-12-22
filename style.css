@@ -38,12 +38,15 @@
 	color:black;
 }
 
-@media screen and (max-width:850px)
+
+
+@media screen and (orientation:portrait)
 {
 	.container
 	{
 		width: 100%;
 		margin: auto;
+		padding:10%;
 	}
 }
 
@@ -82,35 +85,125 @@ strong
 
 /* Consignes pour l'en-tête */
 
-header ul
-{
-	display:flex;
-	justify-content: space-around;
-	flex-wrap: wrap-reverse;
-}
-
-header li
-{
-	margin: 20px;
-}
-
-.hebergement 
-{
-	color: #0065FC;
-}
-
-.inscription 
-{
-	color: #0065FC;
-	font-weight: bold;
-}
-
 header div
 {
 	display: flex;
 	justify-content: space-between;	
 	flex-wrap: wrap;
 }
+
+header ul
+{
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header li
+{
+	padding: 20px;
+}
+
+.hebergement
+{
+	border-top: 2px #0065FC solid;
+}
+
+.hebergement a
+{
+	color: #0065FC;
+}
+
+.inscription a
+{
+	color: #0065FC;
+	font-weight: bold;
+}
+
+@media screen and (max-width:1024px)
+{
+	ul
+	{
+		justify-content: flex-start;
+		padding: 0;
+	}
+	.hebergement
+	{
+		padding-right: 50px;
+		padding-left: 20px;
+		border-bottom: 2px #0065FC solid;
+		border-top: 0px;
+		text-align: left;
+		margin: 0;
+	}
+
+	.activites
+	{
+		padding-left: 50px;
+		padding-right: 20px;
+		border-bottom: 2px #F2F2F2 solid;
+		text-align: right;
+		margin: 0;
+	}
+
+	.inscription
+	{
+		position: absolute;
+		top: 50px;
+		right: 20px;
+		border-bottom: 0px;
+	}
+
+	header div
+	{
+		flex-direction: column;
+	}
+
+}
+
+@media screen and (orientation:portrait)
+{
+	ul
+	{
+		justify-content: flex-start;
+		padding: 0;
+	}
+	.hebergement
+	{
+		padding-right: 50px;
+		padding-left: 20px;
+		border-bottom: 2px #0065FC solid;
+		border-top: 0px;
+		text-align: left;
+		margin: 0;
+	}
+
+	.activites
+	{
+		padding-left: 50px;
+		padding-right: 20px;
+		border-bottom: 2px #F2F2F2 solid;
+		text-align: right;
+		margin: 0;
+	}
+
+	.inscription
+	{
+		position: absolute;
+		top: 50px;
+		right: 20px;
+		border-bottom: 0px;
+	}
+
+	header div
+	{
+		flex-direction: column;
+	}
+
+}
+
+
+
 
 /* Consignes pour la partie formulaire de recherche */
 
@@ -160,12 +253,12 @@ form ul li::before
     background-repeat: no-repeat;
     background-position: center;
 	border-radius: 50%;
-	color: #0065FC;
+	fill: #0065FC;
 }
 
 .economique::before 
 {
-    background-image: url(icone/bill.svg);
+	background-image: url(icone/bill.svg);
 }
 
 .familial::before 
@@ -188,8 +281,21 @@ form h2
 	font-size: medium;
 }
 
+#map
+{
+	display: inline-block;
+	color: black;
+	background-color: #F2F2F2;
+	padding: 4.9px;
+	font-size: xx-small;
+	border: 1px #F2F2F2 solid;
+	margin: 0;
+}
+
+
 input
 {
+	display: inline-block;
 	margin: 0;
 	border: 1px #F2F2F2 solid;
 	padding: 0.2%;
@@ -205,19 +311,72 @@ button
 	cursor: pointer;
 }
 
+#search
+{
+	display: none;
+}
+
 button:active
 {
 	box-shadow: 1px 1px 3px black inset;
 }
 
-#map
+@media screen and (max-width:850px)
 {
-	color: black;
-	background-color: #F2F2F2;
-	padding: 0.4%;
-	font-size: xx-small;
-	border: 1px #F2F2F2 solid;
-	margin: 0;
+	form div
+	{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	form ul
+	{
+		flex-direction: column;
+	}
+
+	form ul :nth-child(2)
+	{
+		align-self: flex-end;
+	}
+
+	#search
+	{
+		display: inline;
+	}
+
+	.rechercher
+	{
+		display: none;
+	}
+}
+
+@media screen and (orientation:portrait)
+{
+	form div
+	{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	form ul
+	{
+		flex-direction: column;
+	}
+	
+	form ul :nth-child(2)
+	{
+		align-self: flex-end;
+	}
+
+	#search
+	{
+		display: inline;
+	}
+
+	.rechercher
+	{
+		display: none;
+	}
 }
 
 .info
@@ -243,8 +402,6 @@ button:active
 	border-radius: 50% ;
 	margin-right: 10px;
 }
-
-  
 
 
 /* Consignes pour les résultats d'hébergements */
@@ -295,6 +452,27 @@ button:active
 
 	#hebergement section div
 	{
+		flex-direction: column;
+		justify-content: space-around;
+		align-content: center;
+	}
+}
+
+@media screen and (orientation:portrait)
+{
+	#hebergement
+	{
+		flex-direction: column-reverse;
+	}
+
+	#hebergement section
+	{
+		background-color: white;
+	}
+
+	#hebergement section div
+	{
+		flex-direction: column;
 		justify-content: space-around;
 		align-content: center;
 	}
@@ -345,6 +523,20 @@ button:active
 		box-shadow: 3px 3px 15px #F2F2F2;
 	}
 }
+@media screen and (orientation:portrait)
+{
+	#hebergement section article img
+	{
+		width:307px;
+		height: 117px;
+	}
+	#hebergement section article
+	{
+		width:317px;
+		height: 187px;
+		box-shadow: 3px 3px 15px #F2F2F2;
+	}
+}
 
 
 #hebergement article p
@@ -380,6 +572,12 @@ aside
 .populaires i
 {
 	margin-right: 20px;
+}
+
+.articles
+{
+	display: flex;
+	flex-direction: column;
 }
 
 aside article
@@ -435,7 +633,15 @@ aside article p
 
 @media screen and (max-width:850px)
 {
-	aside
+	.articles
+	{
+		align-items: center;
+	}
+}
+
+@media screen and (orientation:portrait)
+{
+	.articles
 	{
 		align-items: center;
 	}
@@ -526,10 +732,33 @@ aside article p
 	overflow: hidden;
 }
 
-@media screen and (max-width:850px)
+@media screen and (max-width:1024px)
 {
 	#activites
 	{
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	#activites article
+	{
+		width: 317px;
+		height:187px;
+	}
+
+	.fort img, .frioul img, .longchamp img, .notre_dame img, .port img, .calanques img
+	{
+		width: 317px;
+		height:127px;
+	}
+
+}
+
+@media screen and (orientation:portrait)
+{
+	#activites
+	{
+		flex-direction: column;
 		align-items: center;
 	}
 	
@@ -577,6 +806,18 @@ footer ul
 	footer
 	{
 		flex-direction: column;
+		flex-basis: 100%;
+		padding: 0;
+	}
+}
+
+@media screen and (orientation:portrait)
+{
+	footer
+	{
+		flex-direction: column;
+		flex-basis: 100%;
+		padding: 0;
 	}
 }
 
