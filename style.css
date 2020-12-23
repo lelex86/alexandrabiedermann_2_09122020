@@ -32,7 +32,7 @@
 .container
 {
 	font-family: Raleway, sans-serif;
-	width:90%;
+	width:95%;
 	max-width: 1400px;
 	margin: auto;
 	color:black;
@@ -219,7 +219,14 @@ form ul
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	margin:0;
 }
+
+.second
+{
+	padding-left:0;
+}
+
 
 form ul li
 {
@@ -328,15 +335,11 @@ button:active
 		flex-direction: column;
 		align-items: flex-start;
 	}
-
-	form ul
+	
+	.second
 	{
 		flex-direction: column;
-	}
-
-	form ul :nth-child(2)
-	{
-		align-self: flex-end;
+		align-items: flex-start;
 	}
 
 	#search
@@ -358,14 +361,9 @@ button:active
 		align-items: flex-start;
 	}
 
-	form ul
+	.second
 	{
 		flex-direction: column;
-	}
-	
-	form ul :nth-child(2)
-	{
-		align-self: flex-end;
 	}
 
 	#search
@@ -428,6 +426,7 @@ button:active
 	background-color: #F2F2F2;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	box-sizing: border-box;		
 }
 
@@ -436,6 +435,7 @@ button:active
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	align-items: center;
 }
 
 @media screen and (max-width:850px)
@@ -480,8 +480,8 @@ button:active
 
 #hebergement section article
 {
-	width: 209px;
-	height:164px;
+	width: 239px;
+	height:194px;
 	padding:4px;
 	border-radius: 15px;
 	background-color: white;
@@ -501,8 +501,8 @@ button:active
 #hebergement section article img
 {
 	display: block;
-	width:200px;
-	height: 78px;
+	width:230px;
+	height: 108px;
 	object-fit: cover;
 	border-radius: 15px 15px 0 0;
 	margin: auto;
@@ -513,13 +513,13 @@ button:active
 {
 	#hebergement section article img
 	{
-		width:307px;
-		height: 117px;
+		width:357px;
+		height: 167px;
 	}
 	#hebergement section article
 	{
-		width:317px;
-		height: 187px;
+		width:367px;
+		height: 237px;
 		box-shadow: 3px 3px 15px #F2F2F2;
 	}
 }
@@ -527,13 +527,13 @@ button:active
 {
 	#hebergement section article img
 	{
-		width:307px;
-		height: 117px;
+		width:357px;
+		height: 167px;
 	}
 	#hebergement section article
 	{
-		width:317px;
-		height: 187px;
+		width:367px;
+		height: 237px;
 		box-shadow: 3px 3px 15px #F2F2F2;
 	}
 }
@@ -582,8 +582,8 @@ aside
 
 aside article
 {
-	width: 317px;
-	height:117px;
+	width: 347px;
+	height:147px;
 	padding:3px;
 	margin:10px;
 	border-radius: 15px;
@@ -602,8 +602,8 @@ aside article a
 
 aside article img
 {
-	width:100px;
-	height: 106px;
+	width:130px;
+	height: 136px;
 	object-fit: cover;
 	border-radius: 15px 0 0 15px;
 	margin: 2px;
@@ -742,14 +742,14 @@ aside article p
 	
 	#activites article
 	{
-		width: 317px;
-		height:187px;
+		width: 367px;
+		height: 247px;
 	}
 
 	.fort img, .frioul img, .longchamp img, .notre_dame img, .port img, .calanques img
 	{
-		width: 317px;
-		height:127px;
+		width: 367px;
+		height:187px;
 	}
 
 }
@@ -765,14 +765,14 @@ aside article p
 	
 	#activites article
 	{
-		width: 317px;
-		height:187px;
+		width: 367px;
+		height: 247px;
 	}
 
 	.fort img, .frioul img, .longchamp img, .notre_dame img, .port img, .calanques img
 	{
-		width: 317px;
-		height:127px;
+		width: 367px;
+		height:187px;
 	}
 
 }
