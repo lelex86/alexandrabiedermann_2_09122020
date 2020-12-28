@@ -24,8 +24,13 @@
                 <p>En plein centre ville ou en pleine nature</p>
             </header>
             <form method="post" action="#"> <!-- formulaire de recherche: Contient un chanmp de recherche et les filtres -->
-                <i class="fas fa-map-marker-alt" id="map"></i><input type="search" name="recherche" value= "Marseille, France"><button><span class="rechercher">Rechercher</span><i class="fas fa-search" id=search></i></button>
-                <div>
+                <div class="saisie">
+                    <i class="fas fa-map-marker-alt" id="map"></i>
+                    <input type="search" name="recherche" value= "Marseille, France">
+                    <button><span class="rechercher">Rechercher</span>
+                    <i class="fas fa-search" id=search></i></button>
+                </div>
+                <div class="filtres">
                     <h2>Filtres</h2>
                     <ul class="first">
                         <li class="economique">Économique</li>
@@ -132,7 +137,7 @@
                     </div>
                 </aside>
             </div>  
-            <section> <!-- Partie activités -->
+            <section class="partie2"> <!-- Partie activités -->
                 <h2> Activités à Marseille</h2>
                 <div id="activites">
                     <article class="port">
