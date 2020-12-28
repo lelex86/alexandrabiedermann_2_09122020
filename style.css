@@ -1,0 +1,831 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Consignes générales */
+/* raleway-regular - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('font/raleway-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('font/raleway-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/raleway-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font/raleway-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('font/raleway-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('font/raleway-v18-latin-regular.svg#Raleway') format('svg'); /* Legacy iOS */
+}
+/* raleway-600 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: url('raleway-v18-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('font/raleway-v18-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/raleway-v18-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('font/raleway-v18-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('font/raleway-v18-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('font/raleway-v18-latin-600.svg#Raleway') format('svg'); /* Legacy iOS */
+}
+
+body
+{
+	font-family: Raleway, sans-serif;
+	font-size: 16px;
+	color:black;
+}
+
+.container
+{
+	width: 95%;
+	max-width: 1400px;
+	margin: auto;
+}
+
+@media screen and (orientation:portrait)
+{
+	.container
+	{
+		min-width: 100%;
+		margin: auto;
+	}
+
+	h2
+	{
+		padding: 4%;
+	}
+}
+
+a
+{
+	text-decoration: none;
+	color: black;
+	font-size: 1rem;
+}
+
+h1, h2
+{
+	font-weight: 600;
+	font-size: 1.4rem; 
+}
+
+h3
+{
+	font-weight: 600;
+	font-size: 1.2rem;
+	margin:3px;
+}
+p
+{
+	font-size: 1rem;
+}
+
+ul
+{
+	list-style-type: none;
+}
+
+strong
+{
+	font-weight: bold;
+}
+
+/* Consignes pour l'en-tête */
+
+header div
+{
+	display: flex;
+	justify-content: space-between;	
+	flex-wrap: wrap;
+}
+
+header ul
+{
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+header li
+{
+	padding: 20px;
+	font-size: 1.3rem;
+}
+
+.hebergement
+{
+	border-top: 2px #0065FC solid;
+}
+
+.hebergement a
+{
+	color: #0065FC;
+}
+
+.inscription a
+{
+	color: #0065FC;
+	font-weight: bold;
+}
+
+@media screen and (max-width:1024px) /* définit l'affichage pour les tablettes en orientation paysage*/
+{
+	header div
+	{
+		flex-direction: column;
+	}
+
+	ul
+	{
+		justify-content: space-between;
+		padding: 0;
+	}
+	.hebergement
+	{
+		border-bottom: 2px #0065FC solid;
+		border-top: 0px;
+		text-align: center;
+		margin: 0;
+		min-width: 40%;
+	}
+
+	.activites
+	{
+		border-bottom: 2px #F2F2F2 solid;
+		text-align: center;
+		margin: 0;
+		min-width: 40%;
+	}
+
+	.inscription
+	{
+		position: absolute;
+		top: 50px;
+		right: 20px;
+	}
+}
+
+@media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
+{
+	header
+	{
+		padding: 2%;
+	}
+
+	header div
+	{
+		flex-direction: column;
+	}
+
+	ul
+	{
+		justify-content: flex-start;
+		padding: 0;
+	}
+	.hebergement
+	{
+		border-bottom: 2px #0065FC solid;
+		border-top: 0px;
+		text-align: center;
+		margin: 0;
+		min-width: 40%;
+	}
+
+	.activites
+	{
+		border-bottom: 2px #F2F2F2 solid;
+		text-align: center;
+		margin: 0;
+		min-width: 40%;
+	}
+
+	.inscription
+	{
+		position: absolute;
+		top: 50px;
+		right: 20px;
+	}
+}
+
+/* Consignes pour la partie formulaire de recherche */
+
+form h2
+{
+	font-size: 1rem;
+}
+
+.saisie
+{
+	min-height: 30px;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+}
+
+#map
+{
+	min-width: 30px;
+	color: black;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle;
+	background-color: #F2F2F2;
+	padding: 3.9px;
+	font-size: 1rem;
+	box-sizing: border-box;
+	border: 1px #F2F2F2 solid;
+	margin: 0;
+}
+
+input
+{
+	display: inline-block;
+	margin: 0;
+	border: 1px #F2F2F2 solid;
+	padding: 3px;
+	font-size: 1rem;
+}
+
+button
+{
+	color: white;
+	background-color: #0065FC;
+	border: 1px #0065FC solid;
+	border-radius: 0 8px 8px 0;
+	padding: 3px;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+#search
+{
+	display: none;
+}
+
+.filtres
+{
+	display: flex;
+	align-items: center;
+}
+
+form ul
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin:0;
+}
+
+.second
+{
+	padding-left:0;
+}
+
+form ul li
+{
+	width: fit-content;
+	border: 1px #F2F2F2 solid;
+	border-radius: 30px;
+	font-size: 1rem;
+	align-items: center;
+	padding-right: 20px;
+	margin: 20px;
+	text-align: center;
+	white-space: nowrap;
+	display: flex;
+}
+
+form ul li:hover
+{
+	scale: 1.1 1.1;
+	background-color: #DEEBFF;
+}
+
+form ul li::before 
+{
+    content: "";
+	display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+    background-size: 15px 15px;
+    background-color: #DEEBFF;
+    background-repeat: no-repeat;
+    background-position: center;
+	border-radius: 50%;
+	fill: #0065FC;
+}
+
+.economique::before 
+{
+	background-image: url(icone/bill.svg);
+}
+
+.familial::before 
+{
+    background-image: url(icone/child.svg);
+}
+
+.romantique::before 
+{
+    background-image: url(icone/heart.svg);
+}
+
+.animaux::before 
+{
+    background-image: url(icone/dog.svg);
+}
+
+.info
+{
+	display: flex;
+	align-items: center;
+}
+
+.info::before
+{
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 1px #F2F2F2 solid;
+	background-image: url(icone/info.svg);
+	background-size: 15px 15px;
+	background-repeat: no-repeat;
+	background-color: white;
+	background-position: center;
+	border-radius: 50% ;
+	margin-right: 10px;
+}
+
+@media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
+{
+	form
+	{
+		padding: 2%;
+	}
+	
+	#search
+	{
+		display: inline;
+		min-width:30px;
+		padding:3.9px;
+		box-sizing: border-box;
+	}
+
+	.rechercher
+	{
+		display: none;
+	}
+	
+	.filtres
+	{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.first
+	{
+		display: flex;
+	}
+
+	.second
+	{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+/* Consignes pour les résultats d'hébergements */
+
+#hebergement
+{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 60px;
+}
+
+#hebergement h2
+{
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 8px;
+}
+
+#hebergement article p
+{
+	margin: 2px;
+}
+#hebergement article i
+{
+	color:#0065FC;
+}
+
+#hebergement section
+{
+	margin-right: 10px;
+	padding: 5px;
+	background-color: #F2F2F2;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;		
+}
+
+#hebergement section div
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#hebergement section article
+{
+	width: 239px;
+	height:194px;
+	padding:4px;
+	border-radius: 15px;
+	background-color: white;
+	box-sizing: border-box;
+	margin: 5px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#hebergement section article a
+{
+	min-width: 100%;
+}
+
+#hebergement section article h3, #hebergement section article p
+{
+	padding-left:5px;
+	margin:2px;
+}
+
+#hebergement section article img
+{
+	display: block;
+	width:230px;
+	height: 108px;
+	object-fit: cover;
+	border-radius: 15px 15px 0 0;
+	margin: auto;
+	text-align: center;
+}
+
+.plus
+{
+	margin: 20px;
+}
+
+aside
+{
+	margin-left: 10px;
+	padding: 5px;
+	background-color: #F2F2F2;	
+	display: flex;
+	flex-direction: column;
+}
+
+.populaires
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2%;
+}
+
+.populaires i
+{
+	height: 30px;
+	margin-right: 20px;
+	font-size: 1.3rem;
+	line-height: 30px;
+	text-align: center;
+	padding:4%;
+}
+
+.articles
+{
+	display: flex;
+	flex-direction: column;
+}
+
+aside article
+{
+	width: 347px;
+	height:147px;
+	padding:3px;
+	margin:10px;
+	border-radius: 15px;
+	background-color: white;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+aside article a
+{
+	min-width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+aside article img
+{
+	width:130px;
+	height: 136px;
+	object-fit: cover;
+	border-radius: 15px 0 0 15px;
+	margin: 2px;
+	vertical-align: middle;
+}
+
+aside article div
+{
+	margin: 15px;
+}
+
+aside article p
+{
+	margin-top: 2px;
+	margin-right: 2px;
+	margin-left: 2px;
+	margin-bottom: 20px;
+}
+
+aside article i
+{
+	margin-top: 30px;
+	color:#0065FC;
+}
+
+@media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
+{
+	#hebergement
+	{
+		flex-direction: column-reverse;
+	}
+
+	#hebergement section
+	{
+		background-color: white;
+		padding: 2%;
+	}
+
+	#hebergement section div
+	{
+		flex-direction: column;
+		justify-content: space-around;
+		align-content: center;
+	}
+
+	#hebergement section article
+	{
+		min-width:90%;
+		min-height: 450px;
+		box-shadow: 3px 3px 15px #F2F2F2;
+	}
+	
+	#hebergement section article img
+	{
+		min-width:100%;
+		min-height: 350px;
+		padding: 5px;
+		box-sizing: border-box;
+	}
+	
+	.plus
+	{
+		padding: 4%;
+	}
+
+	aside article
+	{
+		min-width:90%;
+		min-height: 200px;
+	}
+
+	aside article img
+	{
+		min-width: 28%;
+		min-height: 190px;
+		padding: 5px;
+		box-sizing: border-box;
+	}
+	
+	.articles
+	{
+		align-items: center;
+		padding: 2%;
+	}
+}
+
+/* Consignes pour la partie activités */
+
+#activites
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 2px;
+}
+
+#activites h2
+{
+	padding: 2%;
+}
+
+#activites article
+{
+	width:260px;
+	height: auto;
+	border-radius: 15px;
+	box-shadow: 0 3px 2px #F2F2F2;
+	margin: 5px;
+}
+
+#activites div
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#activites h3
+{
+	padding:10px;
+	vertical-align: center;
+}
+
+#activites img
+{
+	border-radius: 15px 15px 0 0;
+}
+
+.port img
+{
+	width:260px;
+	height:370px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.fort img
+{
+	width:260px;
+	height:160px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.frioul img
+{
+	width:260px;
+	height:90px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.calanques img
+{
+	width:260px;
+	height:370px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.notre_dame img
+{
+	width:260px;
+	height:120px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.longchamp img
+{
+	width:260px;
+	height:135px;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+@media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
+{
+	.partie2 h2
+	{
+		padding-left: 8%;
+	}
+	
+	#activites
+	{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#activites article
+	{
+		min-width: 90%;
+		min-height: 400px;
+		justify-content: space-between;
+	}
+
+	#activites div
+	{
+		min-width: 100%;
+		min-height: 400px;
+		justify-content: space-between;
+		padding: 2%;
+		align-items: center;
+	}
+
+
+	.fort img, .frioul img, .longchamp img, .notre_dame img, .port img, .calanques img
+	{
+		min-width: 100%;
+		min-height:300px;
+	}
+
+}
+
+@media screen and (max-width:1024px) and (orientation:landscape) /* définit l'affichage pour les tablettes et apareil en orientation paysage*/
+{
+	#activites
+	{
+		justify-content: space-around;
+		padding: 2%;
+	}
+	
+	#activites article, #activites div
+	{
+		min-width: 40%;
+		min-height: 100px;
+		justify-content: space-around;
+	}
+
+	.fort img, .frioul img, .longchamp img, .notre_dame img, .port img, .calanques img
+	{
+		min-width: 100%;
+		min-height:75px;
+	}
+
+}
+
+
+/* Consignes pour le pieds de page */
+
+footer
+{
+	width: 100%;
+	background-color: #F2F2F2;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+	margin-right: 0;
+	margin-left: 0;
+	padding-right: 300px;
+	box-sizing: border-box;
+}
+
+footer h2
+{
+	margin-left: 60px;
+}
+
+footer ul
+{
+	padding: 0;
+	margin-left: 60px;
+}
+
+@media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
+{
+	footer
+	{
+		flex-direction: column;
+		flex-basis: 100%;
+		padding: 0;
+	}
+
+	footer h2
+	{
+		padding: 0;
+	}
+
+	footer nav
+	{
+		padding-left: 2%;
+	}
+}
+
+
