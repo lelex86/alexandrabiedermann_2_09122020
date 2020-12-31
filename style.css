@@ -34,6 +34,7 @@ html
 	font-family: Raleway, sans-serif;
 	font-size: 16px;
 	color:black;
+	background-color: white;
 }
 
 .container
@@ -47,19 +48,20 @@ a
 {
 	text-decoration: none;
 	color: black;
+	background-color: white;
 	font-size: 1rem;
 }
 
 h1, h2
 {
 	font-weight: 600;
-	font-size: 1.3rem; 
+	font-size: 1.2rem; 
 }
 
 h3
 {
 	font-weight: 600;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	margin:3px;
 }
 p
@@ -88,7 +90,6 @@ strong
 	.container
 	{
 		min-width: 100%;
-		margin: auto;
 	}
 
 	h2
@@ -118,6 +119,7 @@ header ul
 	display:flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	padding:0;
 }
 
 header li
@@ -129,16 +131,19 @@ header li
 .hebergement
 {
 	border-top: 2px #0065FC solid;
+	margin: 0;
 }
 
 .hebergement a
 {
 	color: #0065FC;
+	background-color: white;
 }
 
 .inscription a
 {
 	color: #0065FC;
+	background-color: white;
 	font-weight: bold;
 }
 
@@ -149,18 +154,16 @@ header li
 		flex-direction: column;
 	}
 
-	ul
+	header ul
 	{
 		width:100%;
 		justify-content: space-between;
-		padding: 0;
 	}
 	.hebergement
 	{
 		border-bottom: 2px #0065FC solid;
 		border-top: 0px;
 		text-align: center;
-		margin: 0;
 		min-width: 45%;
 	}
 
@@ -192,17 +195,15 @@ header li
 		flex-direction: column;
 	}
 
-	ul
+	header ul
 	{
 		justify-content: flex-start;
-		padding: 0;
 	}
 	.hebergement
 	{
 		border-bottom: 4px #0065FC solid;
 		border-top: 0px;
 		text-align: center;
-		margin: 0;
 		min-width: 45%;
 	}
 
@@ -237,18 +238,19 @@ form h2
 	flex-wrap: nowrap;
 }
 
-#map
+.map
 {
+	display: inline-block;
 	min-width: 30px;
 	color: black;
 	text-align: center;
-	line-height: 30px;
-	vertical-align: middle;
 	background-color: #F2F2F2;
-	padding: 3.9px;
+	padding-left:5.9px;
+	padding-right: 5.9px;
+	padding-bottom: 3.9px;
+	padding-top: 9px;
 	font-size: 1rem;
 	box-sizing: border-box;
-	border: 2px #F2F2F2 solid;
 	border-radius:8px 0 0 8px;
 	margin: 0;
 }
@@ -257,18 +259,23 @@ input
 {
 	display: inline-block;
 	margin: 0;
-	border: 2px #F2F2F2 solid;
-	padding: 3px;
+	border-top: 2px #F2F2F2 solid;
+	border-bottom: 2px #F2F2F2 solid;
+	border-right: none;
+	border-left: none;
+	border-radius: 0;
+	padding: 5px;
 	font-size: 1rem;
+	-webkit-appearance: none;
 }
 
 button
 {
 	color: white;
 	background-color: #0065FC;
-	border: 2px #0065FC solid;
+	border: none;
 	border-radius: 0 8px 8px 0;
-	padding: 3px;
+	padding: 5px;
 	cursor: pointer;
 	font-size: 1rem;
 }
@@ -291,39 +298,39 @@ button
 	justify-content: space-around;
 	align-items: center;
 	margin:0;
+	padding: 0;
 }
 
-.familial
-{
-	margin-right: 0;
-}
 .second
 {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: center;
-	margin: 0;
+	padding: 0;
 }
 
 form ul li
 {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	text-align: center;
 	width: fit-content;
-	border: 2px #F2F2F2 solid;
+	margin: 20px;
+	padding-right: 20px;
+	font-size: 1rem;
+	border-top: 2px #F2F2F2 solid;
+	border-bottom: 2px #F2F2F2 solid;
+	border-right: 2px #F2F2F2 solid;
 	border-left: 0;
 	border-radius: 30px;
-	font-size: 1rem;
-	align-items: center;
-	padding-right: 20px;
-	margin: 20px;
-	text-align: center;
-	white-space: nowrap;
-	display: flex;
 }
 
 form ul li:hover
 {
 	transform: scale(1.1);
+	color: #0065FC;
 	background-color: #DEEBFF;
 }
 
@@ -331,10 +338,11 @@ form ul li::before
 {
     content: "";
 	display: inline-block;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     margin-right: 20px;
-    background-size: 15px 15px;
+	background-size: 20px 20px;
+	color: #0065FC;
     background-color: #DEEBFF;
     background-repeat: no-repeat;
     background-position: center;
@@ -377,6 +385,7 @@ form ul li::before
 	background-image: url(icone/info.svg);
 	background-size: 15px 15px;
 	background-repeat: no-repeat;
+	color: #0065FC;
 	background-color: white;
 	background-position: center;
 	border-radius: 50% ;
@@ -392,23 +401,20 @@ form ul li::before
 
 	.saisie
 	{
-	min-height: 50px;
+		min-height: 50px;
 	}
 
-	#map
+	.map
 	{
 		min-width: 50px;
-		line-height: 50px;
 	}
 	
 	#search
 	{
 		display: inline;
 		min-width:50px;
-		padding:3.9px;
-		border: 2px #0065FC solid;
+		padding:5.9px;
 		border-radius: 0 8px 8px 0;
-		cursor: pointer;
 	}
 
 	.rechercher
@@ -435,9 +441,9 @@ form ul li::before
 
 	form ul li::before 
 	{
-		height: 60px;
-		width: 60px;
-		background-size: 30px 30px;
+		height: 70px;
+		width: 70px;
+		background-size: 40px 40px;
 	}
 
 	.info::before
@@ -472,6 +478,7 @@ form ul li::before
 #hebergement article i
 {
 	color:#0065FC;
+	background-color: white;
 }
 
 #hebergement section
@@ -499,6 +506,7 @@ form ul li::before
 	height:194px;
 	padding:4px;
 	border-radius: 15px;
+	color: black;
 	background-color: white;
 	box-sizing: border-box;
 	margin: 5px;
@@ -535,10 +543,17 @@ form ul li::before
 	margin: 20px;
 }
 
+.plus a
+{
+	color: black;
+	background-color: #F2F2F2;
+}
+
 aside
 {
 	margin-left: 10px;
 	padding: 5px;
+	color: black;
 	background-color: #F2F2F2;	
 	display: flex;
 	flex-direction: column;
@@ -574,8 +589,8 @@ aside article
 	height:147px;
 	padding:3px;
 	margin:10px;
-	border-radius: 15px;
-	background-color: white;
+	color: black;
+	background-color: #F2F2F2;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
@@ -588,6 +603,7 @@ aside article a
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	border-radius: 15px;
 }
 
 aside article img
@@ -596,7 +612,7 @@ aside article img
 	height: 136px;
 	object-fit: cover;
 	border-radius: 15px 0 0 15px;
-	margin: 2px;
+	margin: 6px;
 	vertical-align: middle;
 }
 
@@ -617,6 +633,7 @@ aside article i
 {
 	margin-top: 30px;
 	color:#0065FC;
+	background-color: white;
 }
 
 @media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
@@ -629,6 +646,7 @@ aside article i
 	#hebergement section
 	{
 		background-color: white;
+		color: black;
 		padding: 2%;
 	}
 
@@ -657,6 +675,12 @@ aside article i
 	.plus
 	{
 		padding: 4%;
+	}
+
+	.plus a
+	{
+		color: black;
+		background-color:white;
 	}
 
 	aside article
@@ -838,6 +862,7 @@ footer
 {
 	width: 100%;
 	background-color: #F2F2F2;
+	color: black;
 	display: flex;
 	justify-content: space-between;
 	margin-top: 40px;
@@ -856,6 +881,12 @@ footer ul
 {
 	padding: 0;
 	margin-left: 60px;
+}
+
+footer a 
+{
+	color: black;
+	background-color: #F2F2F2;
 }
 
 @media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
