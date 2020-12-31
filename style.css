@@ -29,11 +29,12 @@
        url('font/raleway-v18-latin-600.svg#Raleway') format('svg'); /* Legacy iOS */
 }
 
-body
+html
 {
 	font-family: Raleway, sans-serif;
 	font-size: 16px;
 	color:black;
+	background-color: white;
 }
 
 .container
@@ -43,37 +44,24 @@ body
 	margin: auto;
 }
 
-@media screen and (orientation:portrait)
-{
-	.container
-	{
-		min-width: 100%;
-		margin: auto;
-	}
-
-	h2
-	{
-		padding: 4%;
-	}
-}
-
 a
 {
 	text-decoration: none;
 	color: black;
+	background-color: white;
 	font-size: 1rem;
 }
 
 h1, h2
 {
 	font-weight: 600;
-	font-size: 1.4rem; 
+	font-size: 1.2rem; 
 }
 
 h3
 {
 	font-weight: 600;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	margin:3px;
 }
 p
@@ -91,6 +79,26 @@ strong
 	font-weight: bold;
 }
 
+
+@media screen and (orientation:portrait)
+{	
+	html
+	{
+		font-size: 40px;
+	}
+	
+	.container
+	{
+		min-width: 100%;
+	}
+
+	h2
+	{
+		padding-left: 4%;
+		padding-top:2%;
+	}
+}
+
 /* Consignes pour l'en-tête */
 
 header div
@@ -100,32 +108,42 @@ header div
 	flex-wrap: wrap;
 }
 
+header div img
+{
+	width: 200px;
+	height: auto;
+}
+
 header ul
 {
 	display:flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	padding:0;
 }
 
 header li
 {
 	padding: 20px;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 }
 
 .hebergement
 {
 	border-top: 2px #0065FC solid;
+	margin: 0;
 }
 
 .hebergement a
 {
 	color: #0065FC;
+	background-color: white;
 }
 
 .inscription a
 {
 	color: #0065FC;
+	background-color: white;
 	font-weight: bold;
 }
 
@@ -136,18 +154,17 @@ header li
 		flex-direction: column;
 	}
 
-	ul
+	header ul
 	{
+		width:100%;
 		justify-content: space-between;
-		padding: 0;
 	}
 	.hebergement
 	{
 		border-bottom: 2px #0065FC solid;
 		border-top: 0px;
 		text-align: center;
-		margin: 0;
-		min-width: 40%;
+		min-width: 45%;
 	}
 
 	.activites
@@ -155,7 +172,7 @@ header li
 		border-bottom: 2px #F2F2F2 solid;
 		text-align: center;
 		margin: 0;
-		min-width: 40%;
+		min-width: 45%;
 	}
 
 	.inscription
@@ -178,26 +195,24 @@ header li
 		flex-direction: column;
 	}
 
-	ul
+	header ul
 	{
 		justify-content: flex-start;
-		padding: 0;
 	}
 	.hebergement
 	{
-		border-bottom: 2px #0065FC solid;
+		border-bottom: 4px #0065FC solid;
 		border-top: 0px;
 		text-align: center;
-		margin: 0;
-		min-width: 40%;
+		min-width: 45%;
 	}
 
 	.activites
 	{
-		border-bottom: 2px #F2F2F2 solid;
+		border-bottom: 4px #F2F2F2 solid;
 		text-align: center;
 		margin: 0;
-		min-width: 40%;
+		min-width: 45%;
 	}
 
 	.inscription
@@ -223,18 +238,20 @@ form h2
 	flex-wrap: nowrap;
 }
 
-#map
+.map
 {
+	display: inline-block;
 	min-width: 30px;
 	color: black;
 	text-align: center;
-	line-height: 30px;
-	vertical-align: middle;
 	background-color: #F2F2F2;
-	padding: 3.9px;
+	padding-left:5.9px;
+	padding-right: 5.9px;
+	padding-bottom: 3.9px;
+	padding-top: 9px;
 	font-size: 1rem;
 	box-sizing: border-box;
-	border: 1px #F2F2F2 solid;
+	border-radius:8px 0 0 8px;
 	margin: 0;
 }
 
@@ -242,18 +259,23 @@ input
 {
 	display: inline-block;
 	margin: 0;
-	border: 1px #F2F2F2 solid;
-	padding: 3px;
+	border-top: 2px #F2F2F2 solid;
+	border-bottom: 2px #F2F2F2 solid;
+	border-right: none;
+	border-left: none;
+	border-radius: 0;
+	padding: 5px;
 	font-size: 1rem;
+	-webkit-appearance: none;
 }
 
 button
 {
 	color: white;
 	background-color: #0065FC;
-	border: 1px #0065FC solid;
+	border: none;
 	border-radius: 0 8px 8px 0;
-	padding: 3px;
+	padding: 5px;
 	cursor: pointer;
 	font-size: 1rem;
 }
@@ -269,37 +291,46 @@ button
 	align-items: center;
 }
 
-form ul
+.first
 {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	flex-wrap: nowrap;
+	justify-content: space-around;
 	align-items: center;
 	margin:0;
+	padding: 0;
 }
 
 .second
 {
-	padding-left:0;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0;
 }
 
 form ul li
 {
-	width: fit-content;
-	border: 1px #F2F2F2 solid;
-	border-radius: 30px;
-	font-size: 1rem;
-	align-items: center;
-	padding-right: 20px;
-	margin: 20px;
-	text-align: center;
-	white-space: nowrap;
 	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	text-align: center;
+	width: fit-content;
+	margin: 20px;
+	padding-right: 20px;
+	font-size: 1rem;
+	border-top: 2px #F2F2F2 solid;
+	border-bottom: 2px #F2F2F2 solid;
+	border-right: 2px #F2F2F2 solid;
+	border-left: 0;
+	border-radius: 30px;
 }
 
 form ul li:hover
 {
-	scale: 1.1 1.1;
+	transform: scale(1.1);
+	color: #0065FC;
 	background-color: #DEEBFF;
 }
 
@@ -307,15 +338,15 @@ form ul li::before
 {
     content: "";
 	display: inline-block;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     margin-right: 20px;
-    background-size: 15px 15px;
+	background-size: 20px 20px;
+	color: #0065FC;
     background-color: #DEEBFF;
     background-repeat: no-repeat;
     background-position: center;
 	border-radius: 50%;
-	fill: #0065FC;
 }
 
 .economique::before 
@@ -354,6 +385,7 @@ form ul li::before
 	background-image: url(icone/info.svg);
 	background-size: 15px 15px;
 	background-repeat: no-repeat;
+	color: #0065FC;
 	background-color: white;
 	background-position: center;
 	border-radius: 50% ;
@@ -366,13 +398,23 @@ form ul li::before
 	{
 		padding: 2%;
 	}
+
+	.saisie
+	{
+		min-height: 50px;
+	}
+
+	.map
+	{
+		min-width: 50px;
+	}
 	
 	#search
 	{
 		display: inline;
-		min-width:30px;
-		padding:3.9px;
-		box-sizing: border-box;
+		min-width:50px;
+		padding:5.9px;
+		border-radius: 0 8px 8px 0;
 	}
 
 	.rechercher
@@ -388,13 +430,27 @@ form ul li::before
 
 	.first
 	{
-		display: flex;
+		justify-content: flex-start;
 	}
 
 	.second
 	{
 		flex-direction: column;
 		align-items: flex-start;
+	}
+
+	form ul li::before 
+	{
+		height: 70px;
+		width: 70px;
+		background-size: 40px 40px;
+	}
+
+	.info::before
+	{
+		width: 70px;
+		height: 70px;
+		background-size: 35px 35px;
 	}
 }
 
@@ -422,6 +478,7 @@ form ul li::before
 #hebergement article i
 {
 	color:#0065FC;
+	background-color: white;
 }
 
 #hebergement section
@@ -449,6 +506,7 @@ form ul li::before
 	height:194px;
 	padding:4px;
 	border-radius: 15px;
+	color: black;
 	background-color: white;
 	box-sizing: border-box;
 	margin: 5px;
@@ -485,10 +543,17 @@ form ul li::before
 	margin: 20px;
 }
 
+.plus a
+{
+	color: black;
+	background-color: #F2F2F2;
+}
+
 aside
 {
 	margin-left: 10px;
 	padding: 5px;
+	color: black;
 	background-color: #F2F2F2;	
 	display: flex;
 	flex-direction: column;
@@ -524,8 +589,8 @@ aside article
 	height:147px;
 	padding:3px;
 	margin:10px;
-	border-radius: 15px;
-	background-color: white;
+	color: black;
+	background-color: #F2F2F2;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
@@ -538,6 +603,7 @@ aside article a
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	border-radius: 15px;
 }
 
 aside article img
@@ -546,7 +612,7 @@ aside article img
 	height: 136px;
 	object-fit: cover;
 	border-radius: 15px 0 0 15px;
-	margin: 2px;
+	margin: 6px;
 	vertical-align: middle;
 }
 
@@ -567,6 +633,7 @@ aside article i
 {
 	margin-top: 30px;
 	color:#0065FC;
+	background-color: white;
 }
 
 @media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
@@ -579,6 +646,7 @@ aside article i
 	#hebergement section
 	{
 		background-color: white;
+		color: black;
 		padding: 2%;
 	}
 
@@ -592,7 +660,7 @@ aside article i
 	#hebergement section article
 	{
 		min-width:90%;
-		min-height: 450px;
+		min-height: 550px;
 		box-shadow: 3px 3px 15px #F2F2F2;
 	}
 	
@@ -609,16 +677,22 @@ aside article i
 		padding: 4%;
 	}
 
+	.plus a
+	{
+		color: black;
+		background-color:white;
+	}
+
 	aside article
 	{
 		min-width:90%;
-		min-height: 200px;
+		min-height: 350px;
 	}
 
 	aside article img
 	{
-		min-width: 28%;
-		min-height: 190px;
+		min-width: 30%;
+		min-height: 340px;
 		padding: 5px;
 		box-sizing: border-box;
 	}
@@ -640,7 +714,7 @@ aside article i
 	padding: 2px;
 }
 
-#activites h2
+.partie2 h2
 {
 	padding: 2%;
 }
@@ -736,14 +810,14 @@ aside article i
 	#activites article
 	{
 		min-width: 90%;
-		min-height: 400px;
+		min-height: 500px;
 		justify-content: space-between;
 	}
 
 	#activites div
 	{
 		min-width: 100%;
-		min-height: 400px;
+		min-height: 500px;
 		justify-content: space-between;
 		padding: 2%;
 		align-items: center;
@@ -753,7 +827,7 @@ aside article i
 	.fort img, .frioul img, .longchamp img, .notre_dame img, .port img, .calanques img
 	{
 		min-width: 100%;
-		min-height:300px;
+		min-height:350px;
 	}
 
 }
@@ -788,6 +862,7 @@ footer
 {
 	width: 100%;
 	background-color: #F2F2F2;
+	color: black;
 	display: flex;
 	justify-content: space-between;
 	margin-top: 40px;
@@ -806,6 +881,12 @@ footer ul
 {
 	padding: 0;
 	margin-left: 60px;
+}
+
+footer a 
+{
+	color: black;
+	background-color: #F2F2F2;
 }
 
 @media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
