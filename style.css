@@ -79,23 +79,11 @@ strong
 	font-weight: bold;
 }
 
-
 @media screen and (orientation:portrait)
-{	
-	html
-	{
-		font-size: 40px;
-	}
-	
+{
 	.container
 	{
-		min-width: 100%;
-	}
-
-	h2
-	{
-		padding-left: 4%;
-		padding-top:2%;
+		margin:0;
 	}
 }
 
@@ -110,7 +98,7 @@ header div
 
 header div img
 {
-	width: 200px;
+	width: 150px;
 	height: auto;
 }
 
@@ -157,14 +145,14 @@ header li
 	header ul
 	{
 		width:100%;
-		justify-content: space-between;
+		justify-content: center;
 	}
 	.hebergement
 	{
 		border-bottom: 2px #0065FC solid;
 		border-top: 0px;
 		text-align: center;
-		min-width: 45%;
+		min-width: 38%;
 	}
 
 	.activites
@@ -172,7 +160,7 @@ header li
 		border-bottom: 2px #F2F2F2 solid;
 		text-align: center;
 		margin: 0;
-		min-width: 45%;
+		min-width: 38%;
 	}
 
 	.inscription
@@ -185,11 +173,7 @@ header li
 
 @media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
 {
-	header
-	{
-		padding: 2%;
-	}
-
+	
 	header div
 	{
 		flex-direction: column;
@@ -197,22 +181,22 @@ header li
 
 	header ul
 	{
-		justify-content: flex-start;
+		justify-content: center;
 	}
 	.hebergement
 	{
-		border-bottom: 4px #0065FC solid;
+		border-bottom: 2px #0065FC solid;
 		border-top: 0px;
 		text-align: center;
-		min-width: 45%;
+		min-width: 38%;
 	}
 
 	.activites
 	{
-		border-bottom: 4px #F2F2F2 solid;
+		border-bottom: 2px #F2F2F2 solid;
 		text-align: center;
 		margin: 0;
-		min-width: 45%;
+		min-width: 38%;
 	}
 
 	.inscription
@@ -394,25 +378,16 @@ form ul li::before
 
 @media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
 {
-	form
-	{
-		padding: 2%;
-	}
 
-	.saisie
+	form ul li
 	{
-		min-height: 50px;
-	}
-
-	.map
-	{
-		min-width: 50px;
+		margin-left:0;
 	}
 	
 	#search
 	{
 		display: inline;
-		min-width:50px;
+		min-width:30px;
 		padding:5.9px;
 		border-radius: 0 8px 8px 0;
 	}
@@ -438,20 +413,6 @@ form ul li::before
 		flex-direction: column;
 		align-items: flex-start;
 	}
-
-	form ul li::before 
-	{
-		height: 70px;
-		width: 70px;
-		background-size: 40px 40px;
-	}
-
-	.info::before
-	{
-		width: 70px;
-		height: 70px;
-		background-size: 35px 35px;
-	}
 }
 
 /* Consignes pour les résultats d'hébergements */
@@ -475,9 +436,16 @@ form ul li::before
 {
 	margin: 2px;
 }
-#hebergement article i
+
+.star--plain
 {
 	color:#0065FC;
+	background-color: white;
+}
+
+.star--empty
+{
+	color:#F2F2F2;
 	background-color: white;
 }
 
@@ -632,8 +600,6 @@ aside article p
 aside article i
 {
 	margin-top: 30px;
-	color:#0065FC;
-	background-color: white;
 }
 
 @media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
@@ -647,7 +613,8 @@ aside article i
 	{
 		background-color: white;
 		color: black;
-		padding: 2%;
+		margin: 0;
+		padding: 0;
 	}
 
 	#hebergement section div
@@ -660,48 +627,24 @@ aside article i
 	#hebergement section article
 	{
 		min-width:90%;
-		min-height: 550px;
+		min-height: 194px;
 		box-shadow: 3px 3px 15px #F2F2F2;
 	}
 	
 	#hebergement section article img
 	{
 		min-width:100%;
-		min-height: 350px;
+		min-height: 108px;
 		padding: 5px;
 		box-sizing: border-box;
 	}
-	
-	.plus
+
+	aside
 	{
-		padding: 4%;
+		margin: 0;
+		padding: 0;
 	}
 
-	.plus a
-	{
-		color: black;
-		background-color:white;
-	}
-
-	aside article
-	{
-		min-width:90%;
-		min-height: 350px;
-	}
-
-	aside article img
-	{
-		min-width: 30%;
-		min-height: 340px;
-		padding: 5px;
-		box-sizing: border-box;
-	}
-	
-	.articles
-	{
-		align-items: center;
-		padding: 2%;
-	}
 }
 
 /* Consignes pour la partie activités */
@@ -805,29 +748,35 @@ aside article i
 	{
 		flex-direction: column;
 		align-items: center;
+		justify-content: space-between;
 	}
 
 	#activites article
 	{
-		min-width: 90%;
-		min-height: 500px;
+		width: 90%;
+		height: 150px;
 		justify-content: space-between;
+		margin-bottom: 3px;
 	}
 
 	#activites div
 	{
-		min-width: 100%;
-		min-height: 500px;
 		justify-content: space-between;
-		padding: 2%;
 		align-items: center;
+		
 	}
 
+	#activites div article
+	{
+		width: 90%;
+		height: 150px;
+		margin: 3px;
+	}
 
 	.fort img, .frioul img, .longchamp img, .notre_dame img, .port img, .calanques img
 	{
-		min-width: 100%;
-		min-height:350px;
+		width: 100%;
+		height:100px;
 	}
 
 }
