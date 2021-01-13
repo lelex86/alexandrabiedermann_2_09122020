@@ -252,14 +252,13 @@ form h2
 {
 	display: inline-block;
 	width: 50px;
-	line-height: 30px;
 	color: black;
 	text-align: center;
 	background-color: #F2F2F2;
 	padding-left:5.9px;
 	padding-right: 5.9px;
 	padding-bottom: 3.9px;
-	padding-top: 9px;
+	padding-top: 17px;
 	font-size: 1rem;
 	box-sizing: border-box;
 	border-radius:12px 0 0 12px;
@@ -403,12 +402,6 @@ form ul li::before
 	form ul li
 	{
 		margin-left:0;
-	}
-
-	.map
-	{
-		min-width: 50px;
-		padding-top: 15px;
 	}
 
 	input
