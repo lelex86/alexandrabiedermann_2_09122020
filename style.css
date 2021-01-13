@@ -84,10 +84,21 @@ strong
 	.container
 	{
 		margin:0;
+		width: 100%;
+	}
+
+	body
+	{
+		margin: 0;
 	}
 }
 
 /* Consignes pour l'en-tête */
+
+header
+{
+	padding: 0;
+}
 
 header div
 {
@@ -142,6 +153,16 @@ header li
 		flex-direction: column;
 	}
 
+	header h1, header p
+	{
+		margin-left:3%;
+	}
+
+	header div img
+	{
+		margin: 3%;
+	}
+
 	header ul
 	{
 		width:100%;
@@ -166,7 +187,7 @@ header li
 	.inscription
 	{
 		position: absolute;
-		top: 50px;
+		top: 24px;
 		right: 20px;
 	}
 }
@@ -177,6 +198,11 @@ header li
 	header div
 	{
 		flex-direction: column;
+	}
+
+	header h1, header p
+	{
+		margin-left:3%;
 	}
 
 	header ul
@@ -202,7 +228,7 @@ header li
 	.inscription
 	{
 		position: absolute;
-		top: 50px;
+		top: 24px;
 		right: 20px;
 	}
 }
@@ -225,7 +251,8 @@ form h2
 .map
 {
 	display: inline-block;
-	min-width: 30px;
+	width: 50px;
+	line-height: 30px;
 	color: black;
 	text-align: center;
 	background-color: #F2F2F2;
@@ -235,7 +262,7 @@ form h2
 	padding-top: 9px;
 	font-size: 1rem;
 	box-sizing: border-box;
-	border-radius:8px 0 0 8px;
+	border-radius:12px 0 0 12px;
 	margin: 0;
 }
 
@@ -248,7 +275,7 @@ input
 	border-right: none;
 	border-left: none;
 	border-radius: 0;
-	padding: 5px;
+	padding: 15px;
 	font-size: 1rem;
 	-webkit-appearance: none;
 }
@@ -258,7 +285,7 @@ button
 	color: white;
 	background-color: #0065FC;
 	border: none;
-	border-radius: 0 8px 8px 0;
+	border-radius: 0 12px 12px 0;
 	padding: 5px;
 	cursor: pointer;
 	font-size: 1rem;
@@ -283,16 +310,7 @@ button
 	align-items: center;
 	margin:0;
 	padding: 0;
-}
-
-.second
-{
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	align-items: center;
-	padding: 0;
-}
+} 
 
 form ul li
 {
@@ -363,13 +381,12 @@ form ul li::before
 {
 	content: "";
 	display: inline-block;
-	width: 20px;
-	height: 20px;
+	width: 25px;
+	height: 25px;
 	border: 1px #F2F2F2 solid;
 	background-image: url(icone/info.svg);
-	background-size: 15px 15px;
+	background-size: 10px 10px;
 	background-repeat: no-repeat;
-	color: #0065FC;
 	background-color: white;
 	background-position: center;
 	border-radius: 50% ;
@@ -378,18 +395,42 @@ form ul li::before
 
 @media screen and (orientation:portrait) /* définit l'affichage pour tous les appareils en orientation portrait*/
 {
-
+	form
+	{
+		margin: 3%;
+	}
+	
 	form ul li
 	{
 		margin-left:0;
 	}
-	
+
+	.map
+	{
+		min-width: 50px;
+		padding-top: 15px;
+	}
+
+	input
+	{
+		min-height: 50px;
+		min-width: 70%;
+		font-size: 1.2rem;
+	}
+
+	button
+	{
+		min-width: 50px;
+		border-radius: 12px 12px 12px 12px;	
+		position: relative;
+		right: 10px;
+	}
+
 	#search
 	{
 		display: inline;
-		min-width:30px;
-		padding:5.9px;
-		border-radius: 0 8px 8px 0;
+		padding:3.9px;
+		
 	}
 
 	.rechercher
@@ -406,13 +447,14 @@ form ul li::before
 	.first
 	{
 		justify-content: flex-start;
+		flex-wrap: wrap;
 	}
 
-	.second
+	.first li
 	{
-		flex-direction: column;
-		align-items: flex-start;
+		margin: 2%;
 	}
+
 }
 
 /* Consignes pour les résultats d'hébergements */
@@ -626,23 +668,42 @@ aside article i
 
 	#hebergement section article
 	{
-		min-width:90%;
-		min-height: 194px;
+		min-width:93%;
+		min-height: 230px;
 		box-shadow: 3px 3px 15px #F2F2F2;
+		margin: 3%;
 	}
 	
 	#hebergement section article img
 	{
 		min-width:100%;
-		min-height: 108px;
+		min-height: 115px;
 		padding: 5px;
 		box-sizing: border-box;
+	}
+
+	.plus a
+	{
+		color: black;
+		background-color: white;
 	}
 
 	aside
 	{
 		margin: 0;
 		padding: 0;
+	}
+
+	.articles
+	{
+		margin-left: 3%;
+		padding-bottom: 10%;
+	}
+
+	.articles article
+	{
+		width: 93%;
+		margin: 3%;
 	}
 
 }
@@ -754,29 +815,30 @@ aside article i
 	#activites article
 	{
 		width: 90%;
-		height: 150px;
+		height: 200px;
 		justify-content: space-between;
-		margin-bottom: 3px;
+		margin-bottom: 3%;
 	}
 
 	#activites div
 	{
 		justify-content: space-between;
 		align-items: center;
+		min-width: 100%;
 		
 	}
 
 	#activites div article
 	{
 		width: 90%;
-		height: 150px;
-		margin: 3px;
+		height: 200px;
+		margin: 3%;
 	}
 
 	.fort img, .frioul img, .longchamp img, .notre_dame img, .port img, .calanques img
 	{
 		width: 100%;
-		height:100px;
+		height:150px;
 	}
 
 }
