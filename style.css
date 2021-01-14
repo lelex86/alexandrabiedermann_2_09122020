@@ -93,6 +93,26 @@ strong
 	}
 }
 
+@media screen and (max-width:1024px) and (orientation:landscape)
+{
+	.container
+	{
+		margin:0;
+		width: 100%;
+	}
+
+	html
+	{
+		min-width:740px;
+	}
+
+	body
+	{
+		margin: 0;
+		width:100%;
+	}
+}
+
 /* Consignes pour l'en-tête */
 
 header
@@ -146,7 +166,7 @@ header li
 	font-weight: bold;
 }
 
-@media screen and (max-width:1024px) /* définit l'affichage pour les tablettes en orientation paysage*/
+@media screen and (max-width:1024px) and (orientation:landscape)/* définit l'affichage pour les tablettes en orientation paysage*/
 {
 	header div
 	{
@@ -448,6 +468,26 @@ form ul li::before
 		margin: 2%;
 	}
 
+}
+
+@media screen and (max-width:1024px) and (orientation:landscape)
+{
+	form
+	{
+		margin:3%;
+	}	
+	.first
+	{
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin:2%;
+		width:100%;
+	}
+
+	.first li
+	{
+		margin: 2%;
+	}
 }
 
 /* Consignes pour les résultats d'hébergements */
